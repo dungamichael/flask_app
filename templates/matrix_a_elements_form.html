@@ -1,0 +1,22 @@
+  <form 
+    id="response"
+    hx-post="/matrix_a_elements" 
+    hx-swap="outerHTML" 
+    hx-target="#response" 
+    class="mb-3">
+    {%for r in range(num_row_a)%}
+      {%for c in range(num_col_a)%}
+      <div class="form-group">
+        <label for="r{{r}}c{{c}}">Row {{r+1}}, Column {{c+1}}:</label>
+        <input type="number" 
+          id="r{{r}}c{{c}}" 
+          placeholder="Enter value of row {{r+1}} column {{c+1}} of matrix A" 
+          name="r{{r}}c{{c}}" 
+          class="form-control mb-3"
+          min="1" 
+          required />
+      </div>
+      {%endfor%}
+    {%endfor%}
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>  

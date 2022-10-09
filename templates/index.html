@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <h1>Matrix Addition</h1>
+  <form 
+    id="response"
+    hx-post="/index" 
+    hx-swap="outerHTML" 
+    hx-target="#response" 
+    class="mb-3">
+    <div class="form-group">
+      <label for="num_row_a">Number of rows of matrix A:</label>
+      <input type="number" 
+        id="num_row_a" 
+        placeholder="Enter the number of row of matrix A" 
+        name="num_row_a" 
+        class="form-control mb-3"
+        min="1" 
+        required />
+    </div>
+    <div class="form-group">
+      <label for="num_col_a">Number of columns of matrix A:</label>
+      <input type="number" 
+        id="num_col_a" 
+        placeholder="Enter the number of columns of matrix A" 
+        name="num_col_a" 
+        class="form-control mb-3"
+        min="1" 
+        required />
+    </div>
+    <div class="form-group">
+      <label for="num_row_b">Number of rows of matrix B:</label>
+      <input type="number" 
+        id="num_row_b" 
+        placeholder="Enter the number of row of matrix B" 
+        name="num_row_b" 
+        class="form-control mb-3"
+        min="1" 
+        required />
+    </div>
+    <div class="form-group">
+      <label for="num_col_b">Number of columns of matrix B:</label>
+      <input type="number" 
+        id="num_col_a" 
+        placeholder="Enter the number of columns of matrix B" 
+        name="num_col_b" 
+        class="form-control mb-3"
+        min="1" 
+        required />
+    </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock content %}
